@@ -273,3 +273,38 @@ h6 {
 .article :where(h1, h2, h3, h4, h5) {
     all: revert;
 }
+
+body {
+    display: grid;
+
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-rows: 200px;
+    gap: 20px;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+
+    border: 5px dashed red;
+    background-color: yellow;
+}
+
+.read {
+    border: 5px solid lightgreen;
+    background-color: green;
+    color: white;
+}
