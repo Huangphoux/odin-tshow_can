@@ -276,20 +276,47 @@ h6 {
 
 body {
     display: grid;
+    gap: 20px;
 
     padding: 20px;
+
+    justify-items: center;
+}
+
+p {
+    font-weight: bolder;
+    font-size: xx-large;
+
+}
+
+button {
+    border-radius: 20px;
+    padding: 10px 50px;
+    background-color: rgb(0, 241, 241);
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
-    grid-auto-rows: 200px;
+    grid-auto-rows: 300px;
     gap: 20px;
 
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
 
-    padding: 20px;
+    padding: 10px 20px;
+
+    resize: both;
+    overflow: auto;
+
+    width: 75vw;
+    height: 75vh;
+
+    place-content: center;
 }
 
 ul {
@@ -297,6 +324,7 @@ ul {
     padding: 0;
 
     display: grid;
+    grid-template-rows: 5fr 1fr 1fr;
     place-items: center;
 
     border: 5px dashed red;
@@ -304,7 +332,12 @@ ul {
 }
 
 .read {
-    border: 5px solid lightgreen;
+    border: 5px solid black;
     background-color: green;
     color: white;
+}
+
+::backdrop {
+    background-color: black;
+    opacity: 0.25;
 }

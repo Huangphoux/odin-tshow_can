@@ -55,5 +55,19 @@ function displayLibrary() {
 addBookToLibrary("The Hobbit", "J.R.R. Tolkien", 295, false);
 addBookToLibrary("The Great Gatsby", "F. Scott Fitzgerald", 180, false);
 addBookToLibrary("Winnie-the-Pooh", "A. A. Milne", 176, true);
+addBookToLibrary("A Study in Scarlet", "Arthur Conan Doyle", 192, true);
 
 displayLibrary();
+
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+showButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+
+closeButton.addEventListener("click", () => {
+    dialog.close();
+});
+
