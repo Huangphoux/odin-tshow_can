@@ -283,16 +283,18 @@ body {
     justify-items: center;
 }
 
+/* Tshow Kahn! */
 p {
     font-weight: bolder;
     font-size: xx-large;
 
 }
 
+/* New Book button and buttons in general */
 button {
-    border-radius: 20px;
     padding: 10px 50px;
-    background-color: rgb(0, 241, 241);
+    background-color: black;
+    color: white;
 
     font-weight: bolder;
     font-size: large;
@@ -302,26 +304,28 @@ button:hover {
     cursor: pointer;
 }
 
+/* Library container */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
     grid-auto-rows: 300px;
-    gap: 20px;
+    gap: 50px;
 
-    border: 2px solid black;
-    border-radius: 20px;
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
 
     padding: 10px 20px;
 
-    resize: both;
-    overflow: auto;
+    /* resize: both;
+    overflow: auto; */
 
-    width: 75vw;
-    height: 60vh;
+    width: 100%;
+    height: 100%;
 
     place-content: center;
 }
 
+/* Book's infos */
 ul {
     list-style: none;
     padding: 0;
@@ -332,11 +336,14 @@ ul {
 
     border: 5px dashed red;
     background-color: yellow;
+
+    box-shadow: 10px 10px black;
 }
 
+/* Books marked as "read" */
 .read {
-    border: 5px solid black;
-    background-color: green;
+    border: 5px solid orange;
+    background-color: purple;
     color: white;
 }
 
@@ -348,6 +355,7 @@ dialog {
     box-shadow: 10px 10px black;
 }
 
+/* Let's add a book! */
 dialog p {
     display: grid;
     place-content: center;
@@ -356,21 +364,18 @@ dialog p {
 
 }
 
-/* ::backdrop {
-    background-image: linear-gradient(45deg,
+::backdrop {
+    /* background-image: linear-gradient(45deg,
             magenta,
             rebeccapurple,
             dodgerblue,
             green);
-    opacity: 0.75;
-} */
+    opacity: 0.75; */
 
-form {
-    display: grid;
-    gap: 20px;
+    backdrop-filter: blur(50px);
 }
 
-.form {
+form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -381,13 +386,9 @@ form {
     place-self: end;
 
     padding: 5px 15px;
-    border-radius: 0%;
-    background-color: black;
-    color: white;
-}
 
-input {
-    justify-self: start;
+    position: relative;
+    right: -50px;
 }
 
 input:invalid {
@@ -409,4 +410,6 @@ input:valid {
     margin-top: 20px;
 
     width: 50%;
+
+    grid-column: 1 / 3;
 }

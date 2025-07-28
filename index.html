@@ -12,28 +12,30 @@
     </head>
     <body>
         <p>Tshow Kahn!</p>
+
         <dialog closedby="any">
-            <button class="close" formmethod="dialog">×</button>
+            <button class="close" formmethod="dialog" autofocus>×</button>
             <p>Let's add a book!</p>
 
             <form>
-                <div class="form">
-                    <label for="title">Book's title</label>
-                    <input type="text" name="title" id="title" required />
+                <label for="title">Book's title</label>
+                <input type="text" name="title" id="title" required />
 
-                    <label for="author">Author's name</label>
-                    <input type="text" name="author" id="author" required />
+                <label for="author">Author's name</label>
+                <input type="text" name="author" id="author" required />
 
-                    <label for="pageNumber">Page count</label>
-                    <input type="number" name="pageNumber" id="pageNumber" min="1" required />
+                <label for="pageNumber">Page count</label>
+                <input type="number" name="pageNumber" id="pageNumber" min="1" required />
 
-                    <label for="isRead">Has this book been read yet?</label>
-                    <input type="checkbox" name="isRead" id="isRead" />
-                </div>
+                <label for="isRead">Has this book been read yet?</label>
+                <input type="checkbox" name="isRead" id="isRead" />
+
                 <button id="submit" class="submit" type="submit">Submit</button>
             </form>
         </dialog>
+
         <button class="newBook">New Book</button>
+
         <div class="container"></div>
     </body>
 </html>
