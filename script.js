@@ -13,7 +13,6 @@ function Book(title, author, pageNumber, isRead) {
     this.isRead = isRead;
 
     const pageInfo = pageNumber > 1 ? "pages" : "page";
-
     this.info = function () {
         // "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
 
@@ -83,5 +82,6 @@ form.addEventListener("submit", (event) => {
 
     displayLibrary();
 
+    form.reset();
     dialog.close();
 });
