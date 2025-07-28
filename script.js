@@ -60,14 +60,19 @@ addBookToLibrary("A Study in Scarlet", "Arthur Conan Doyle", 192, true);
 displayLibrary();
 
 const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const showBtn = document.querySelector(".newBook");
+const closeBtn = document.querySelector(".close");
+const submitBtn = document.querySelector(".submit");
 
-showButton.addEventListener("click", () => {
+showBtn.addEventListener("click", () => {
     dialog.showModal();
 });
 
-closeButton.addEventListener("click", () => {
+closeBtn.addEventListener("click", () => {
     dialog.close();
 });
 
+submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    dialog.close();
+});

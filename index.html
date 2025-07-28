@@ -13,7 +13,25 @@
     <body>
         <p>Tshow Kahn!</p>
         <dialog>
-            <form action="" method="post"></form>
+            <button class="close">×</button>
+            <p>Let's add a book!</p>
+
+            <form method="dialog">
+                <div class="form">
+                    <label for="title">Book's title</label>
+                    <input type="text" name="title" id="title" required />
+
+                    <label for="author">Author's name</label>
+                    <input type="text" name="author" id="author" required />
+
+                    <label for="pageNumber">Page count</label>
+                    <input type="number" name="pageNumber" id="pageNumber" min="1" required />
+
+                    <label for="isRead">Has this book been read yet?</label>
+                    <input type="checkbox" name="isRead" id="isRead" required />
+                </div>
+                <button id="submit" class="submit" type="submit">Submit</button>
+            </form>
         </dialog>
         <button class="newBook">New Book</button>
         <div class="container"></div>

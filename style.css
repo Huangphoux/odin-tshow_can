@@ -293,6 +293,9 @@ button {
     border-radius: 20px;
     padding: 10px 50px;
     background-color: rgb(0, 241, 241);
+
+    font-weight: bolder;
+    font-size: large;
 }
 
 button:hover {
@@ -314,7 +317,7 @@ button:hover {
     overflow: auto;
 
     width: 75vw;
-    height: 75vh;
+    height: 60vh;
 
     place-content: center;
 }
@@ -337,7 +340,67 @@ ul {
     color: white;
 }
 
+dialog {
+    margin: auto;
+
+    padding: 30px 100px;
+}
+
+dialog p {
+    display: grid;
+    place-content: center;
+
+    margin-bottom: 20px;
+
+}
+
 ::backdrop {
     background-color: black;
     opacity: 0.25;
+}
+
+form {
+    display: grid;
+    gap: 20px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.close {
+    display: grid;
+    place-self: end;
+
+    padding: 5px 15px;
+    border-radius: 0%;
+    background-color: black;
+    color: white;
+}
+
+input {
+    justify-self: start;
+}
+
+input:invalid {
+    border: 3px dashed red;
+}
+
+input:invalid:required {
+    background-image: linear-gradient(to right, pink, lightgreen);
+}
+
+input:valid {
+    border: 1px solid black;
+}
+
+.submit {
+    display: grid;
+    place-self: center;
+
+    margin-top: 20px;
+
+    width: 50%;
 }
