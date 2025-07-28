@@ -33,6 +33,7 @@ function addBookToLibrary(title, author, pageNumber, isRead) {
 
 function displayLibrary() {
     const container = document.querySelector(".container");
+    container.textContent = "";
 
     for (const book of myLibrary) {
         const card = document.createElement("ul");
@@ -60,6 +61,7 @@ addBookToLibrary("A Study in Scarlet", "Arthur Conan Doyle", 192, true);
 displayLibrary();
 
 const dialog = document.querySelector("dialog");
+const form = document.querySelector("form");
 const showBtn = document.querySelector(".newBook");
 const closeBtn = document.querySelector(".close");
 const submitBtn = document.querySelector(".submit");
@@ -72,7 +74,14 @@ closeBtn.addEventListener("click", () => {
     dialog.close();
 });
 
-submitBtn.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
+
+    let formObj = Object.fromEntries(new FormData(form));
+
+    addBookToLibrary(formObj.title, formObj.author, +formObj.pageNumber, "isRead" in formObj ? true : false);
+
+    displayLibrary();
+
     dialog.close();
 });
