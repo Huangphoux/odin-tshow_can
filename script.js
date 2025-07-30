@@ -22,7 +22,11 @@ function Book(title, author, pageNumber, isRead) {
     };
 
     this.display = function () {
-        return [title, author, `${pageNumber} ${pageInfo}`];
+        return [this.title, this.author, `${this.pageNumber} ${pageInfo}`];
+    };
+
+    this.toggleRead = function () {
+        this.isRead = !this.isRead;
     };
 }
 
@@ -57,8 +61,16 @@ function displayLibrary() {
 
             displayLibrary();
         });
-
         card.appendChild(removeBtn);
+
+        const toggleBtn = document.createElement("button");
+        toggleBtn.textContent = "Toggle";
+        toggleBtn.addEventListener("click", () => {
+            const index = myLibrary.map((e) => e.id).indexOf(card.dataset.book);
+            myLibrary[index].toggleRead();
+            displayLibrary();
+        });
+        card.appendChild(toggleBtn);
 
         container.appendChild(card);
     }
