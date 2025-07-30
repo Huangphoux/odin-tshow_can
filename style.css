@@ -343,8 +343,9 @@ ul {
 
 /* Books marked as "read" */
 .read {
-    border: 5px solid orange;
-    background-color: purple;
+    border: none;
+    box-shadow: none;
+    background-color: green;
     color: white;
 }
 
