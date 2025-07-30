@@ -47,6 +47,18 @@ function displayLibrary() {
             info.textContent = prop;
             card.appendChild(info);
         }
+        card.setAttribute("data-book", `${book.id}`);
+
+        const removeBtn = document.createElement("button");
+        removeBtn.textContent = "Remove";
+        removeBtn.addEventListener("click", () => {
+            const index = myLibrary.map((e) => e.id).indexOf(card.dataset.book);
+            myLibrary.splice(index, 1);
+
+            displayLibrary();
+        });
+
+        card.appendChild(removeBtn);
 
         container.appendChild(card);
     }
